@@ -1,0 +1,15 @@
+{
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "always",
+  },
+  "eslint.validate": [
+    "javascript",
+  ],
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true
+  }
+}
