@@ -37,3 +37,5 @@ export default async function getRecipeData(
 
   return recipeData
 }
+
+export * from './types'

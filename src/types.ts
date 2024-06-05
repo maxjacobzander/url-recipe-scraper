@@ -1,17 +1,17 @@
-interface Author {
+export interface Author {
   '@type': string
   name: string
   url: string
 }
 
-interface ImageObject {
+export interface ImageObject {
   '@type': string
   url: string
   height: number
   width: number
 }
 
-interface VideoObject {
+export interface VideoObject {
   '@type': string
   contentUrl: string
   description: string
@@ -21,14 +21,14 @@ interface VideoObject {
   uploadDate: string
 }
 
-interface Logo {
+export interface Logo {
   '@type': string
   url: string
   width: number
   height: number
 }
 
-interface Publisher {
+export interface Publisher {
   '@type': string
   name: string
   url: string
@@ -38,7 +38,7 @@ interface Publisher {
   sameAs: string[]
 }
 
-interface NutritionInformation {
+export interface NutritionInformation {
   '@type': string
   calories: string
   carbohydrateContent: string
@@ -52,29 +52,29 @@ interface NutritionInformation {
   unsaturatedFatContent: string
 }
 
-interface HowToStep {
+export interface HowToStep {
   '@type': string
   text: string
   image?: ImageObject[]
 }
 
-interface Item {
+export interface Item {
   '@id': string
   name: string
 }
 
-interface ListItem {
+export interface ListItem {
   '@type': string
   position: number
   item: Item
 }
 
-interface BreadcrumbList {
+export interface BreadcrumbList {
   '@type': string
   itemListElement: ListItem[]
 }
 
-interface MainEntityOfPage {
+export interface MainEntityOfPage {
   '@type': string[]
   '@id': string
   breadcrumb: BreadcrumbList
