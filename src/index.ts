@@ -1,4 +1,5 @@
 import {
+  formatRecipeData,
   getApplicationLdJsonTags,
   getRecipeSchemaData,
   getScriptTags,
@@ -39,10 +40,11 @@ export default async function getRecipeData(
     throw new Error('No application/ld+json tags found')
 
   const parsedTagData = parseTagData(applicationLdJsonTags)
-  const recipeData = getRecipeSchemaData(parsedTagData)
+  const recipeSchemaData = getRecipeSchemaData(parsedTagData)
 
-  if (!recipeData) throw new Error('No recipe data found')
+  if (!recipeSchemaData) throw new Error('No recipe data found')
 
+  const recipeData = formatRecipeData(recipeSchemaData)
   return recipeData
 }
 
