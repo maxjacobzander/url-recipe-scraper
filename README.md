@@ -2,7 +2,7 @@
 
 ## About
 
-A lightweight recipe scraper that parses recipe data from many popular recipe websites that ues application ld json format.
+A lightweight recipe scraper that parses recipe data from many popular recipe websites that use application ld json format by url or html.
 
 ## Install
 
@@ -32,6 +32,20 @@ async function run() {
   const recipe = await getRecipeData(url)
   console.log(recipe)
 }
+```
+
+or with `html input`
+
+```js
+import getRecipeData from '@rethora/url-recipe-scraper'
+
+const url = 'https://example/recipes/creamy-courgette-potato-bake'
+
+const html = fetch(url).then((response) => response.text())
+
+getRecipeData.then((recipe) => {
+  console.log(recipe)
+})
 ```
 
 ## Example Response

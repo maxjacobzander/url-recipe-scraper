@@ -1,8 +1,13 @@
 import { Recipe } from './types'
 
-export const validateUrl = (url: string) => {
+export const validateUrl = (input: string) => {
   const urlRegex = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i
-  return urlRegex.test(url)
+  return urlRegex.test(input)
+}
+
+export const validateHtml = (input: string) => {
+  const htmlRegex = /<([A-Za-z][A-Za-z0-9]*)\b[^>]*>[\s\S]*?<\/\1>/gi
+  return htmlRegex.test(input)
 }
 
 export const getScriptTags = (html: string) => {
