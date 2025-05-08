@@ -72,8 +72,8 @@ export const getRecipeSchemaData = (schemaData: any[]) => {
   return recipeSchema ? (recipeSchema as SchemaRecipe) : null
 }
 
-const formatString = (str: string | undefined): string | undefined =>
-  str?.trim() ?? undefined
+const formatString = (str: string | undefined | null): string | undefined =>
+  typeof str === 'string' ? str.trim() : undefined
 
 const formatStringOrArray = (input: string | string[] | undefined) => {
   if (!input) return undefined
